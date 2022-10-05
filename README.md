@@ -1,0 +1,2 @@
+# nicehive
+nicehash niveos autoswitcher
