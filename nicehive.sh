@@ -3,7 +3,7 @@
 source /hive-config/rig.conf
 
 baseUrl='https://api2.hiveos.farm/api/v2'
-switchPercent=7
+switchPercent=10
 
 fsPrefix='AUTO'
 
@@ -43,7 +43,7 @@ for LINE in `cat /tmp/nicehive.fs | jq -r '.name' | grep $fsPrefix` ; do
  ALGO=`echo $LINE | cut -d '-' -f 2`
  RATE=`echo $LINE | cut -d '-' -f 3`
  PRICE=`cat /tmp/nicehive.prices | jq -r ". | select (.algorithm == \"$ALGO\") | .paying" | awk '{printf("%.8f\n", $1)}'`
- DAILYPROFIT[$ALGO]=`echo "$RATE * $PRICE" | bc | sed -e 's/^-\./-0./' -e 's/^\./0./'`
+ DAILYPROFIT[$ALGO]=`echo "$RATE / 100 * $PRICE" | bc | sed -e 's/^-\./-0./' -e 's/^\./0./'`
  echo Fs $fsPrefix-$ALGO-$RATE daily_profit=${DAILYPROFIT[$ALGO]}
  if (( $(echo "$BESTPROFIT < ${DAILYPROFIT[$ALGO]}" |bc -l) )) ; then
     BESTPROFIT=${DAILYPROFIT[$ALGO]}
@@ -61,7 +61,7 @@ if [ "$1" != "" ] ; then exit; fi
 
 if (( $(echo "(${DAILYPROFIT[$CURRENTALGO]} * (100 + $switchPercent) / 100) < $BESTPROFIT" |bc -l) )) ; then
         FSID=`cat /tmp/nicehive.fs | jq -r ". | select (.name == \"$NEWFS\") | .id"`
-        echo "!!! Сhanging fs to $NEWFS ($FSID)"
+        echo "!!! Changing fs to $NEWFS ($FSID)"
         response=`curl -s -H "Content-Type: application/json" \
                 -H "Authorization: Bearer $accessToken" -X PATCH -d "{\"fs_id\": $FSID}" \
                 "$baseUrl/farms/$FARM_ID/workers/$RIG_ID"`
