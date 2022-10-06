@@ -1,7 +1,7 @@
 # nicehive
 nicehash niveos autoswitcher
 
-Install
+Install:
 
 curl https://raw.githubusercontent.com/ks99999/nicehive/main/nicehive-setup.sh | bash
 
