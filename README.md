@@ -1,6 +1,8 @@
 # nicehive
 nicehash niveos autoswitcher
 
-wget --no-cache https://raw.githubusercontent.com/ks99999/nicehive/main/nicehive.sh -O /hive/sbin/nicehive.sh ; chmod a+rx /hive/sbin/nicehive.sh
+Install
+curl https://raw.githubusercontent.com/ks99999/nicehive/main/nicehive-setup.sh | bash
 
-echo Ki8xMCAqICogKiAqIC9oaXZlL3NiaW4vbmljZWhpdmUuc2ggPiAvdG1wL25pY2VoaXZlLmxvZwo= | base64 -d >> /hive/etc/crontab.root ; sync
+Put your HiveOS API key:
+echo XXX > /hive-config/nicehive.token
