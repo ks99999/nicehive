@@ -7,3 +7,5 @@ curl https://raw.githubusercontent.com/ks99999/nicehive/main/nicehive-setup.sh |
 
 Put your HiveOS API key:
 echo XXX > /hive-config/nicehive.token
+
+Reboot rig
