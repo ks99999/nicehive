@@ -15,6 +15,7 @@ DELIM[AUTOLYKOS]=0.01
 DELIM[OCTOPUS]=0.01
 DELIM[KAWPOW]=0.01
 DELIM[DAGGERHASHIMOTO]=0.01
+DELIM[ZELHASH]=0.01
 
 # get workers
 response=`curl -s -H "Content-Type: application/json" \
