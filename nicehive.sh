@@ -15,7 +15,7 @@ DELIM[AUTOLYKOS]=0.01
 DELIM[OCTOPUS]=0.01
 DELIM[KAWPOW]=0.01
 DELIM[DAGGERHASHIMOTO]=0.01
-DELIM[ZELHASH]=0.01
+DELIM[ZELHASH]=0.00000001
 
 # get workers
 response=`curl -s -H "Content-Type: application/json" \
@@ -58,7 +58,7 @@ for LINE in `cat /tmp/nicehive.fs | jq -r '.name' | grep $fsPrefix` ; do
     BESTPROFITALGO="$ALGO"
  fi
 done
-exit
+
 
 CURRENTALGO=`echo $CURRENTFS | cut -d '-' -f 2`
 echo - current fs $CURRENTFS daily_profit=${DAILYPROFIT[$CURRENTALGO]}
