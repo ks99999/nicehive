@@ -11,9 +11,10 @@ curl https://raw.githubusercontent.com/ks99999/nicehive/main/nicehive-setup.sh |
 и поместите его в файл на риге командой:
 
 `echo Ваш_API_key > /hive-config/nicehive.token`
-_fr_
-*grthty*fre
-^dwerew^
+'fr'
+"fr"
+
+
 
 Перезагрузите риг.
 
