@@ -1,4 +1,4 @@
-# nicehive (nicehash niveos autoswitcher)
+# nicehive (nicehash hiveos autoswitcher)
 Этот проект является доработкой оригинального nicehive разработчика sadm2014
 https://github.com/sadm2014/nicehive
 
