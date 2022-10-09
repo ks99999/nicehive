@@ -5,6 +5,7 @@ https://github.com/sadm2014/nicehive
 Позволяетавтоматически переключать полетные листы в зависимости от текущего профита на nicehash
 
 Установка
+
 `curl https://raw.githubusercontent.com/ks99999/nicehive/main/nicehive-setup.sh | bash`
 
 Далее сгенерируйте в разделе account в HiveOS API key:
