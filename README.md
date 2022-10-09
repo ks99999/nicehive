@@ -9,7 +9,9 @@ curl https://raw.githubusercontent.com/ks99999/nicehive/main/nicehive-setup.sh |
 
 Далее сгенерируйте в разделе account в HiveOS API key:
 и поместите его в файл на риге командой:
-echo Ваш_API_key > /hive-config/nicehive.token
+
+`echo Ваш_API_key > /hive-config/nicehive.token`
+_fr_
 
 Перезагрузите риг.
 
