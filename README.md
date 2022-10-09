@@ -12,6 +12,8 @@ curl https://raw.githubusercontent.com/ks99999/nicehive/main/nicehive-setup.sh |
 
 `echo Ваш_API_key > /hive-config/nicehive.token`
 _fr_
+*grthty*fre
+^dwerew^
 
 Перезагрузите риг.
 
