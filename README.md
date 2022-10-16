@@ -25,3 +25,5 @@ https://github.com/sadm2014/nicehive
 
 Чтобы nicehive начал работать просто активируйте любой полетник для него (AUTO-XXX-YYY)
 Для деактивации nicehash активируйте полетник не для него.
+
+Для предложений и багов просьба писать автору на a@korshunov.me,  telegramm @Alexandr_admin
